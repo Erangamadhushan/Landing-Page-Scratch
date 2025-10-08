@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [16, 18, 20]
+        node: [20]
 
     steps:
       - name: Checkout code
@@ -24,6 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./
 
       - name: Run tests
         run: npm test
+        working-directory: ./
