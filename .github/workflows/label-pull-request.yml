@@ -1,0 +1,24 @@
+name: Label Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main ]
+permissions:
+  pull-requests: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add 'needs review' label to PR
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: needs review 
+          only_labels: ''
+          remove_labels: ''
+          issue_number: ${{ github.event.pull_request.number }}
+
+# The workflow below is for deploying a React + Vite project to GitHub Pages.
+# It checks out the code, sets up Node.js, installs dependencies, builds the project,
+# and deploys the built files to the `gh-pages` branch.
