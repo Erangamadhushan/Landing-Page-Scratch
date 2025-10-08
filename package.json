@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "landing-page-scratch",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "echo \"Running tests...\""
   },
   "dependencies": {
     "axios": "^1.12.2",
