@@ -1,8 +1,15 @@
 import React from 'react'
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 import { Button } from 'primereact/button';
 
 export const LeftContent = () => {
+    const navigate = useNavigate();
+
+    const handleLearnMore = () => {
+        navigate('/Landing-Page-Scratch/about');
+    }
+
     return (
         <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
@@ -19,6 +26,7 @@ export const LeftContent = () => {
                 <Button
                     variant="outline"
                     className=" text-primary border border-yellow-400 rounded-md px-8 py-6 text-base"
+                    onClick={handleLearnMore}
                 >
                     Know more
                     <ArrowRight className="ml-2 h-5 w-5" />

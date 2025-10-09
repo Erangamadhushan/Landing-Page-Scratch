@@ -2,6 +2,8 @@ import React from 'react'
 import { ArrowRight, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 
+import { ContactForm } from '../components/Contact/ContactForm';
+
 export const Contact = () => {
     return (
         <section className="min-h-screen py-24">
@@ -32,72 +34,24 @@ export const Contact = () => {
                             <Mail className="text-neutral-900" size={28} />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                        <p className="text-neutral-400 mb-2">hello@interiordesign.com</p>
-                        <p className="text-neutral-400">info@interiordesign.com</p>
+                        <p className="text-neutral-400 mb-2">contact@interiordesign.com</p>
+                        <p className="text-neutral-400">contact@interiordesign.com</p>
                     </div>
                     <div className="bg-neutral-800 p-8 rounded-lg text-center hover:bg-neutral-750 transition-colors">
                         <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                             <MapPin className="text-neutral-900" size={28} />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">Location</h3>
-                        <p className="text-neutral-400 mb-2">123 Design Street</p>
-                        <p className="text-neutral-400">New York, NY 10001</p>
+                        <p className="text-neutral-400 mb-2">123 Main Street</p>
+                        <p className="text-neutral-400">Rajagiriya, Colombo 8</p>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8">
                     <div className="bg-neutral-800 p-10 rounded-lg">
                         <h3 className="text-3xl font-bold text-white mb-8">Send us a message</h3>
-                        <form className="space-y-6">
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-400 mb-2">Full Name</label>
-                                <input
-                                    type="text"
-                                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
-                                    placeholder="John Doe"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-400 mb-2">Email Address</label>
-                                <input
-                                    type="email"
-                                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-400 mb-2">Phone Number</label>
-                                <input
-                                    type="tel"
-                                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
-                                    placeholder="+1 (555) 000-0000"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-400 mb-2">Project Type</label>
-                                <select className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors">
-                                    <option>Interior Design</option>
-                                    <option>Residential Design</option>
-                                    <option>Commercial Design</option>
-                                    <option>Renovation</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-400 mb-2">Message</label>
-                                <textarea
-                                    rows={4}
-                                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
-                                    placeholder="Tell us about your project..."
-                                ></textarea>
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full px-8 py-4 bg-yellow-400 text-neutral-900 font-medium rounded-lg hover:bg-yellow-300 transition-colors flex items-center justify-center space-x-2"
-                            >
-                                <span>Send Message</span>
-                                <Send size={18} />
-                            </button>
-                        </form>
+                        
+                        <ContactForm />
                     </div>
                     <div className="bg-neutral-800 p-10 rounded-lg">
                         <h3 className="text-3xl font-bold text-white mb-8">Office Hours</h3>
