@@ -51,7 +51,7 @@ export const ContactForm = () => {
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        pattern="^[a-zA-Z\s]+$"
+                        pattern="^[a-zA-Z\s\-'.]+$"
                         required
                     />
                     <p className="mt-2 text-sm text-red-800 invisible peer-invalid:visible  ">Enter valid name</p>
