@@ -31,8 +31,8 @@ export const SignIn = () => {
                 password: ''
             });
             // Redirect to the previous location or default to home
-            const redirectPath = localStorage.getItem('redirectAfterLogin') || '/Landing-Page-Scratch/';
-            if (redirectPath && redirectPath === '/Landing-Page-Scratch/user')
+            const redirectPath = localStorage.getItem('redirectAfterLogin') || '/';
+            if (redirectPath && redirectPath === '/user')
                 login({ email: formData.email, name: "John Doe" });
             else
                 login({ email: formData.email, name: "Guest User" });
@@ -72,7 +72,7 @@ export const SignIn = () => {
             </form>
             <div>
                 <p className="mt-4 text-sm text-center text-neutral-400">
-                    Don't have an account? <a href="/Landing-Page-Scratch/signup" className="text-yellow-400 hover:underline">Sign Up</a>
+                    Don't have an account? <a href="/signup" className="text-yellow-400 hover:underline">Sign Up</a>
                 </p>
             </div>
         </div>

@@ -69,7 +69,7 @@ export const Blog = () => {
                                 <p className="text-neutral-400 mb-4 leading-relaxed">
                                     {post.excerpt}
                                 </p>
-                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform" onClick={() => navigate(`/Landing-Page-Scratch/blog/${post.id}`)}>
+                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform" onClick={() => navigate(`/blog/${post.id}`)}>
                                     <span>Read more</span>
                                     <ArrowRight size={18} />
                                 </button>

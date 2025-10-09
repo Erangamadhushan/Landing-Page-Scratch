@@ -5,15 +5,15 @@ import { UserContext } from '../context/UserContext';
 export default function Navbar() {
     const { user, logout } = useContext(UserContext);
     const navlinks = [
-        { name: 'Home', href: '/Landing-Page-Scratch/' },
-        { name: 'About us', href: '/Landing-Page-Scratch/about' },
-        { name: 'Services', href: '/Landing-Page-Scratch/services' },
-        { name: 'Contact', href: '/Landing-Page-Scratch/contact' },
-        { name: 'Blog', href: '/Landing-Page-Scratch/blog' },
+        { name: 'Home', href: '/' },
+        { name: 'About us', href: '/about' },
+        { name: 'Services', href: '/services' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' },
     ];
 
     const handleSignIn = () => {
-        window.location.href = '/Landing-Page-Scratch/signin';
+        window.location.href = '/signin';
     }
     return (
         <nav className={`border-b border-b-yellow-400 bg-black text-yellow-400 z-100`} >

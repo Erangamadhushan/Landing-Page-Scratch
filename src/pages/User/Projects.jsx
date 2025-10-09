@@ -13,7 +13,7 @@ export const Projects = () => {
     if (!user) {
         console.log('User not found, redirecting to sign-in');
         localStorage.setItem('redirectAfterLogin', location.pathname);
-        return <Navigate to="/Landing-Page-Scratch/signin" />;
+        return <Navigate to="/signin" />;
     }
 
     return (

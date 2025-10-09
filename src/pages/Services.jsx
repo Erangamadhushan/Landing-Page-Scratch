@@ -51,7 +51,7 @@ export const Services = () => {
                     <p className="text-neutral-800 text-lg mb-8 max-w-2xl mx-auto">
                         Let's discuss your project and create something extraordinary together.
                     </p>
-                    <button className="px-10 py-4 bg-neutral-900 text-yellow-400 font-medium rounded-full hover:bg-neutral-800 transition-colors" onClick={() => window.location.href = '/Landing-Page-Scratch/user/projects'}>
+                    <button className="px-10 py-4 bg-neutral-900 text-yellow-400 font-medium rounded-full hover:bg-neutral-800 transition-colors" onClick={() => window.location.href = '/user/projects'}>
                         Start Your Project
                     </button>
                 </div>
