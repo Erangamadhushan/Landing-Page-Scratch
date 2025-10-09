@@ -87,6 +87,13 @@ export const ContactForm = () => {
                 <div>
                     <label className="block text-sm font-medium text-neutral-400 mb-2">Project Type</label>
                     <select className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" name='projectType' value={formData.projectType} onChange={handleInputChange}>
+                        <option value="" disabled selected>
+                            Select a project type
+                        </option>
+                        <option>Interior Design</option>
+                        <option>Residential Design</option>
+                        <option>Commercial Design</option>
+                        <option>Renovation</option>
                         <option>Interior Design</option>
                         <option>Residential Design</option>
                         <option>Commercial Design</option>
