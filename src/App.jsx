@@ -6,6 +6,9 @@ import { About } from './pages/About';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { Blog } from './pages/Blog';
+import { SignIn } from './pages/SignIn';
+import { SignUp } from './pages/SignUp';
+import { ReadBlogPost } from './pages/ReadBlogPost';
 
 function App() {
 
@@ -19,7 +22,11 @@ function App() {
             <Route path="/Landing-Page-Scratch/services" element={<Services />} />
             <Route path="/Landing-Page-Scratch/contact" element={<Contact />} />
             <Route path="/Landing-Page-Scratch/blog" element={<Blog />} />
+            <Route path="/Landing-Page-Scratch/blog/:post" element={<ReadBlogPost />} />
+            <Route path="/Landing-Page-Scratch/signin" element={<SignIn />} />
+            <Route path="/Landing-Page-Scratch/signup" element={<SignUp />} />
           </Route>
+          <Route path="*" element={<h1 className='text-3xl font-bold text-yellow-400 flex items-center justify-center h-screen'>404 - Page Not Found</h1>} />
         </Routes>
       </div>
     </Router>

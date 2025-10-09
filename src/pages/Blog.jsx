@@ -2,10 +2,12 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { ArrowRight } from "lucide-react";
 import blogPosts from '../data/blogPosts';
+import { useNavigate } from 'react-router-dom';
 
 export const Blog = () => {
     const [blogPostsCount, setBlogPostsCount] = useState(3);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setBlogPostsCount(3);
@@ -67,7 +69,7 @@ export const Blog = () => {
                                 <p className="text-neutral-400 mb-4 leading-relaxed">
                                     {post.excerpt}
                                 </p>
-                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform">
+                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform" onClick={() => navigate(`/Landing-Page-Scratch/blog/${post.id}`)}>
                                     <span>Read more</span>
                                     <ArrowRight size={18} />
                                 </button>
