@@ -40,6 +40,27 @@ const blogPosts = [
         date: '2025-09-15',
         category: 'Budget Tips',
         image: 'https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+        title: 'The Art of Mixing Textures',
+        excerpt: 'Create depth and interest in your interiors by mastering the art of mixing different textures.',
+        date: '2025-09-10',
+        category: 'Design Tips',
+        image: 'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+        title: 'Lighting Design Essentials',
+        excerpt: 'Illuminate your space perfectly with our guide to lighting design essentials and techniques.',
+        date: '2025-09-05',
+        category: 'Lighting',
+        image: 'https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+        title: 'Creating Functional Home Offices',
+        excerpt: 'Design a productive and stylish home office that meets all your work-from-home needs.',
+        date: '2025-09-01',
+        category: 'Home Office',
+        image: 'https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
 ];
 export default blogPosts;

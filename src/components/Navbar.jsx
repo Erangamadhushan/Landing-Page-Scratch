@@ -2,7 +2,7 @@ import { Button } from 'primereact/button';
 import { UserCircle } from "lucide-react";
 export default function Navbar() {
     const navlinks = [
-        { name: 'Home', href: '/Landing-Page-Scratch' },
+        { name: 'Home', href: '/Landing-Page-Scratch/' },
         { name: 'About us', href: '/Landing-Page-Scratch/about' },
         { name: 'Services', href: '/Landing-Page-Scratch/services' },
         { name: 'Contact', href: '/Landing-Page-Scratch/contact' },

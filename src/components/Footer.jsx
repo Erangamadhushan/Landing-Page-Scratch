@@ -11,6 +11,11 @@ const navigation = [
 ];
 
 export const Footer = () => {
+
+    const handleNewsletterSubmit = (e) => {
+        e.preventDefault();
+        alert('Thank you for subscribing!');
+    }
     return (
         <footer className="bg-black border-t border-neutral-800 py-12">
             <div className="max-w-7xl mx-auto px-8">
@@ -49,14 +54,16 @@ export const Footer = () => {
                         <h4 className="text-white font-semibold mb-4">Newsletter</h4>
                         <p className="text-neutral-400 text-sm mb-4">Subscribe to our newsletter for design tips and updates.</p>
                         <div className="flex">
-                            <input
-                                type="email"
-                                placeholder="Your email"
-                                className="flex-1 px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-l-lg text-white text-sm focus:outline-none focus:border-yellow-400"
-                            />
-                            <button className="px-4 py-2 bg-yellow-400 text-neutral-900 rounded-r-lg hover:bg-yellow-300 transition-colors">
-                                <Send size={18} />
-                            </button>
+                            <form className="flex w-full" onSubmit={handleNewsletterSubmit}>
+                                <input
+                                    type="email"
+                                    placeholder="Your email"
+                                    className="flex-1 px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-l-lg text-white text-sm focus:outline-none focus:border-yellow-400"
+                                />
+                                <button type='submit' className="px-4 py-2 bg-yellow-400 text-neutral-900 rounded-r-lg hover:bg-yellow-300 transition-colors">
+                                    <Send size={18} />
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

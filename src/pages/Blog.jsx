@@ -1,8 +1,24 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import { ArrowRight } from "lucide-react";
 import blogPosts from '../data/blogPosts';
 
 export const Blog = () => {
+    const [blogPostsCount, setBlogPostsCount] = useState(3);
+
+    useEffect(() => {
+        setBlogPostsCount(3);
+    }, []);
+
+    const loadMoreArticles = () => {
+        if(blogPostsCount < blogPosts.length) {
+            setBlogPostsCount(prevCount => prevCount + 3);
+        }
+        else {
+            setBlogPostsCount(blogPosts.length);
+        }
+    }
+    
     return (
         <section className="min-h-screen py-24">
             <div className="max-w-7xl mx-auto px-8">
@@ -19,7 +35,7 @@ export const Blog = () => {
                 </div>
 
                 <div className="grid grid-cols-3 gap-8">
-                    {blogPosts.map((post, index) => (
+                    {blogPosts.slice(0, blogPostsCount).map((post, index) => (
                         <article
                             key={index}
                             className="group bg-neutral-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
@@ -54,7 +70,7 @@ export const Blog = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <button className="px-10 py-4 border-2 border-yellow-400 text-yellow-400 font-medium rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all">
+                    <button className="px-10 py-4 border-2 border-yellow-400 text-yellow-400 font-medium rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all" onClick={loadMoreArticles}>
                         Load More Articles
                     </button>
                 </div>
