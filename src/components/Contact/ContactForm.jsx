@@ -36,7 +36,7 @@ export const ContactForm = () => {
             alert('Please fill in all required fields with valid information.');
         }
 
-        
+
     }
 
     return (
@@ -90,10 +90,6 @@ export const ContactForm = () => {
                         <option value="" disabled selected>
                             Select a project type
                         </option>
-                        <option>Interior Design</option>
-                        <option>Residential Design</option>
-                        <option>Commercial Design</option>
-                        <option>Renovation</option>
                         <option>Interior Design</option>
                         <option>Residential Design</option>
                         <option>Commercial Design</option>
