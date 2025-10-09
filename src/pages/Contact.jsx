@@ -1,51 +1,19 @@
 import React from 'react'
-import { ArrowRight, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
-import { Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { ArrowRight, Clock} from "lucide-react";
 
+
+import { ContactHeroContent } from '../components/Contact/ContactHeroContent';
 import { ContactForm } from '../components/Contact/ContactForm';
+import { ContactDetailsCards } from '../components/Contact/ContactDetailsCards';
+import { SocialmediaLinks } from '../components/Contact/SocialmediaLinks';
 
 export const Contact = () => {
     return (
         <section className="min-h-screen py-24">
             <div className="max-w-7xl mx-auto px-8">
-                <div className="text-center mb-16">
-                    <div className="inline-block border-l-4 border-yellow-400 pl-6 text-left">
-                        <p className="text-yellow-400 text-sm font-medium mb-4 tracking-wider">GET IN TOUCH</p>
-                        <h2 className="text-5xl font-bold text-white mb-6">
-                            Let's create <span className="text-yellow-400">together.</span>
-                        </h2>
-                        <p className="text-neutral-400 text-lg max-w-2xl">
-                            Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-                        </p>
-                    </div>
-                </div>
+                <ContactHeroContent />
 
-                <div className="grid grid-cols-3 gap-8 mb-16">
-                    <div className="bg-neutral-800 p-8 rounded-lg text-center hover:bg-neutral-750 transition-colors">
-                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Phone className="text-neutral-900" size={28} />
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                        <p className="text-neutral-400 mb-2">+1 (555) 123-4567</p>
-                        <p className="text-neutral-400">Mon-Fri 9am-6pm</p>
-                    </div>
-                    <div className="bg-neutral-800 p-8 rounded-lg text-center hover:bg-neutral-750 transition-colors">
-                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Mail className="text-neutral-900" size={28} />
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                        <p className="text-neutral-400 mb-2">contact@interiordesign.com</p>
-                        <p className="text-neutral-400">contact@interiordesign.com</p>
-                    </div>
-                    <div className="bg-neutral-800 p-8 rounded-lg text-center hover:bg-neutral-750 transition-colors">
-                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <MapPin className="text-neutral-900" size={28} />
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Location</h3>
-                        <p className="text-neutral-400 mb-2">123 Main Street</p>
-                        <p className="text-neutral-400">Rajagiriya, Colombo 8</p>
-                    </div>
-                </div>
+                <ContactDetailsCards />
 
                 <div className="grid grid-cols-2 gap-8">
                     <div className="bg-neutral-800 p-10 rounded-lg">
@@ -76,23 +44,8 @@ export const Contact = () => {
                                 <ArrowRight size={18} />
                             </button>
                         </div>
-                        <div>
-                            <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-                            <div className="flex space-x-4">
-                                <a href="#" className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-neutral-900 text-white transition-colors">
-                                    <Twitter size={20} />
-                                </a>
-                                <a href="#" className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-neutral-900 text-white transition-colors">
-                                    <Facebook size={20} />
-                                </a>
-                                <a href="#" className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-neutral-900 text-white transition-colors">
-                                    <Instagram size={20} />
-                                </a>
-                                <a href="#" className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-neutral-900 text-white transition-colors">
-                                    <Youtube size={20} />
-                                </a>
-                            </div>
-                        </div>
+                        
+                        <SocialmediaLinks />
                     </div>
                 </div>
             </div>
