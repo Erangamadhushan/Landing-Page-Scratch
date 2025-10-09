@@ -30,11 +30,11 @@ export default function Navbar() {
                     </div>
                     <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8">
                         <UserCircle className="mr-2 size-7 hover:fill-yellow-800" />
-                        {!user ? (
-                            <Button icon="pi pi-sign-in" className="ml-2 border border-yellow-400 px-3 py-1 rounded-md hover:bg-yellow-800" onClick={handleSignIn}>Sign In</Button>
-                        ) : (
-                            <Button icon="pi pi-sign-out" className="ml-2 border border-yellow-400 px-3 py-1 rounded-md hover:bg-yellow-800" onClick={logout}>Logout</Button>
-                        )}
+                        {user ? 
+                                                     <Button icon="pi pi-sign-out" className="ml-2 border border-yellow-400 px-3 py-1 rounded-md hover:bg-yellow-800" onClick={logout}>Logout</Button>
+                                                  : 
+                                                     <Button icon="pi pi-sign-in" className="ml-2 border border-yellow-400 px-3 py-1 rounded-md hover:bg-yellow-800" onClick={handleSignIn}>Sign In</Button>}
+
                     </Button>
                 </div>
             </div>
