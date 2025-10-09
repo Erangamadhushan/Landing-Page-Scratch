@@ -18,7 +18,7 @@ export const ContactDetailsCards = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-neutral-400 mb-2">contact@interiordesign.com</p>
-                <p className="text-neutral-400">contact@interiordesign.com</p>
+                <p className="text-neutral-400">support@interiordesign.com</p>
             </div>
             <div className="bg-neutral-800 p-8 rounded-lg text-center hover:bg-neutral-750 transition-colors">
                 <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
