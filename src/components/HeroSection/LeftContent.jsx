@@ -14,11 +14,11 @@ export const LeftContent = () => {
                     <span className="text-primary">than just Interior.</span>
                 </h1>
                 <p className="text-muted-foreground text-lg mb-8 max-w-md">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+                    We are committed to delivering exceptional interior design services that transform spaces and enrich lives.
                 </p>
                 <Button
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none px-8 py-6 text-base"
+                    className=" text-primary border border-yellow-400 rounded-md px-8 py-6 text-base"
                 >
                     Know more
                     <ArrowRight className="ml-2 h-5 w-5" />

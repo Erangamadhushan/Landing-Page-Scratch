@@ -4,9 +4,6 @@ import { MainContent } from './HeroSection/MainContent'
 
 export const HeroSection = () => {
   return (
-    <div className="relative">
-      <SocialMedia />
       <MainContent />
-    </div>
   )
 }
