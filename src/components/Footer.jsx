@@ -1,5 +1,6 @@
 import React from 'react'
 import { Send } from "lucide-react";
+import { Home, Info, Briefcase, Mail, BookOpen } from "lucide-react";
 
 const navigation = [
     { id: 'home', label: 'Home', icon: Home },

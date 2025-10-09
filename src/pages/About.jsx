@@ -1,6 +1,4 @@
 import React from 'react'
-import { ArrowRight } from "lucide-react";
-import { Button } from 'primereact/button';
 
 export const About = () => {
     return (
