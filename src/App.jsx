@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="min-h-screen">
         <Routes>
-          <Route path="/Landing-Page-Scratch/" element={<Layout />} >
+          <Route path="/Landing-Page-Scratch" element={<Layout />} >
             <Route index element={<HeroSection />} />
             <Route path="/Landing-Page-Scratch/about" element={<About />} />
             <Route path="/Landing-Page-Scratch/services" element={<Services />} />
