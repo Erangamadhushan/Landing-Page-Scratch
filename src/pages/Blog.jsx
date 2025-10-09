@@ -2,9 +2,12 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { ArrowRight } from "lucide-react";
 import blogPosts from '../data/blogPosts';
+import { useNavigate } from 'react-router-dom';
 
 export const Blog = () => {
     const [blogPostsCount, setBlogPostsCount] = useState(3);
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setBlogPostsCount(3);
@@ -14,11 +17,17 @@ export const Blog = () => {
         if(blogPostsCount < blogPosts.length) {
             setBlogPostsCount(prevCount => prevCount + 3);
         }
+        else if(blogPostsCount + 3 >= blogPosts.length) {
+            alert('No more articles to load.');
+            setLoading(true);
+        }
         else {
             setBlogPostsCount(blogPosts.length);
+            setLoading(true);
+            alert('No more articles to load.');
         }
     }
-    
+
     return (
         <section className="min-h-screen py-24">
             <div className="max-w-7xl mx-auto px-8">
@@ -60,7 +69,7 @@ export const Blog = () => {
                                 <p className="text-neutral-400 mb-4 leading-relaxed">
                                     {post.excerpt}
                                 </p>
-                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform">
+                                <button className="text-yellow-400 font-medium flex items-center space-x-2 group-hover:translate-x-2 transition-transform" onClick={() => navigate(`/Landing-Page-Scratch/blog/${post.id}`)}>
                                     <span>Read more</span>
                                     <ArrowRight size={18} />
                                 </button>
@@ -70,7 +79,7 @@ export const Blog = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <button className="px-10 py-4 border-2 border-yellow-400 text-yellow-400 font-medium rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all" onClick={loadMoreArticles}>
+                    <button className="px-10 py-4 border-2 border-yellow-400 cursor-pointer text-yellow-400 font-medium rounded-full hover:bg-yellow-400 hover:text-neutral-900 transition-all" disabled={loading} onClick={loadMoreArticles}>
                         Load More Articles
                     </button>
                 </div>
