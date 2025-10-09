@@ -1,10 +1,7 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from 'primereact/button';
-import main_img_1 from '../assets/main_img_1.jpg';
-import main_img_2 from '../assets/main_img_2.jpg';
 
 import Navbar from './components/Navbar';
 import { HeroSection } from "./components/HeroSection";
+import { Footer } from "./components/Footer";
 
 function App() {
 
@@ -14,6 +11,9 @@ function App() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   )
 }
